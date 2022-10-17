@@ -4,7 +4,7 @@ Write a function that receives a phrase and returns a dictionary with the words 
 
 
 def convert_phrase_into_dict(phrase: str) -> dict:
-    """Split a string into a dict[word, len]"""
+    """Split a string into a dict {word: len}"""
     my_dict: dict = {}
     split: list = phrase.split()
 
