@@ -45,12 +45,15 @@ class Grid(object):
 
 if __name__ == '__main__':
     matrix = Grid(3, 3)
+
     print(matrix)
+
     for row in range(matrix.get_height()):
         for column in range(matrix.get_width()):
             matrix[row][column] = row * column
 
     print(matrix)
+
     matrix.get_height()
     matrix.get_width()
     matrix.__getitem__(1)
