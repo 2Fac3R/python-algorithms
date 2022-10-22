@@ -14,8 +14,8 @@ items = [
 ]
 
 prices = list(map(lambda item: item['price'], items))
-print(items)
-print(prices)
+# print(items)
+# print(prices)
 
 
 def add_taxes(item):
@@ -24,5 +24,5 @@ def add_taxes(item):
 
 
 new_items = list(map(add_taxes, items))
-print(new_items)
-print(items)
+# print(new_items)
+# print(items)

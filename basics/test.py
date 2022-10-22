@@ -1,8 +1,14 @@
-population = 0
-i = 0
-while population < 8.85:
-    population = population + 0.05
-    i += 1
-    print(f"{i}La población es menor a la esperada")
+import read_csv
+import charts
 
-print("La población es de 8.85 millones de habitantes")
+
+if __name__ == '__main__':
+    data = read_csv.read_csv('datasets/world_population.csv')
+    data = list(
+        filter(lambda item: item['Continent'] == 'South America', data))
+    countries = list(map(lambda x: x['CCA3'], data))
+    percentages = list(map(lambda x: x['World Population Percentage'], data))
+
+    charts.generate_bar_chart(countries, percentages,
+                              'countries', 'percentages', 'bar.png')
+    charts.generate_pie_chart(countries, percentages, 'pie.png')
