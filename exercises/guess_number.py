@@ -1,15 +1,10 @@
-"""
-Guess a number game with the user.
-"""
-
-import random
-
-
-def main():
+def guess_number():
     """
+    Guess a number game
     Input the upper and lower limit of a range of numbers
     and lets the user guess the random number until correct.
     """
+    import random
     lower_limit = int(input("Enter the smaller number of the range: "))
     upper_limit = int(input("Enter the larger number of the range: "))
     secret_number = random.randint(lower_limit, upper_limit)
@@ -29,4 +24,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    guess_number()

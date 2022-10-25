@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import read_csv
 
 
 def generate_bar_chart(labels, values, xlabel, ylabel, file_name):
@@ -19,10 +20,12 @@ def generate_pie_chart(labels, values, file_name):
 
 
 if __name__ == '__main__':
-    labels = ['a', 'b', 'c']
-    values = [10, 40, 800]
-    xlabel = 'x'
-    ylabel = 'y'
+    data = read_csv.read_csv('datasets/world_population.csv')
+    data = list(
+        filter(lambda item: item['Continent'] == 'South America', data))
+    countries = list(map(lambda x: x['CCA3'], data))
+    percentages = list(map(lambda x: x['World Population Percentage'], data))
 
-    generate_bar_chart(labels, values, xlabel, ylabel, 'bar_test.png')
-    generate_pie_chart(labels, values, 'pie_test.png')
+    generate_bar_chart(countries, percentages, 'countries',
+                       'percentages', 'bar.png')
+    generate_pie_chart(countries, percentages, 'pie.png')

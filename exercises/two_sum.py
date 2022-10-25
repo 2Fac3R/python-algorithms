@@ -47,3 +47,4 @@ def two_sum(nums: List[int], target: int) -> List[int]:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+    two_sum([3, 2, 4], 6)
