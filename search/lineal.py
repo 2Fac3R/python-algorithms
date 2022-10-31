@@ -1,4 +1,4 @@
-from execution_time import execution_time
+from utils.execution_time import execution_time
 
 
 @execution_time
@@ -11,7 +11,7 @@ def busqueda_lineal(lista: list, objetivo: int) -> bool:
 
 if __name__ == '__main__':
     import random
-    
+
     tamano_de_lista: int = int(input('De que tamano sera la lista? '))
     objetivo: int = int(input('Que numero quieres encontrar? '))
 
