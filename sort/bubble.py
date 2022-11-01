@@ -1,10 +1,17 @@
 from typing import List
 
 
-def bubble_sort(list: List[int]) -> List[int]:
-    """
+def bubble(list: List[int]) -> List[int]:
+    """Bubble Sort
+
     Sorting by swaping elements.
     Time complexity O(n) * O(n) = O(n * n) = O(n^2).
+
+    Args:
+        list (List[int]): a collection with comparable items
+
+    Returns:
+        List[int]: sorted collection 
     """
     n: int = len(list)
 
@@ -23,5 +30,5 @@ if __name__ == '__main__':
     list: List[int] = [random.randint(0, 100) for i in range(n)]
     print(list)
 
-    sorted_list: List[int] = bubble_sort(list)
+    sorted_list: List[int] = bubble(list)
     print(sorted_list)

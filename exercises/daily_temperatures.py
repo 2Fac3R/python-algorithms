@@ -2,20 +2,26 @@ from typing import Deque, List
 
 
 def daily_temperatures(temperatures: List[int]) -> List[int]:
-    """
-    Daily Temperatures
-    Given an array of integers temperatures represents the daily temperatures,
+    """Daily Temperatures
+    Given an array of integers temperatures that represents the daily temperatures,
     return an array answer such that answer[i] is the number of days
     you have to wait after the ith day to get a warmer temperature.
 
     If there is no future day for which this is possible, keep answer[i] == 0 instead.
 
-    >>> daily_temperatures([73, 74, 75, 71, 69, 72, 76, 73])
-    [1, 1, 4, 2, 1, 1, 0, 0]
-    >>> daily_temperatures([30, 40, 50, 60])
-    [1, 1, 1, 0]
-    >>> daily_temperatures([30, 60, 90])
-    [1, 1, 0]
+    Args:
+        temperatures (List[int]): list of integers temperatures that represents the daily temperatures
+
+    Returns:
+        List[int]: a list answer
+
+    Tests:
+        >>> daily_temperatures([73, 74, 75, 71, 69, 72, 76, 73])
+        [1, 1, 4, 2, 1, 1, 0, 0]
+        >>> daily_temperatures([30, 40, 50, 60])
+        [1, 1, 1, 0]
+        >>> daily_temperatures([30, 60, 90])
+        [1, 1, 0]
     """
     # Brute Force O(n^2)
     # n: int = len(temperatures)

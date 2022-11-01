@@ -2,11 +2,18 @@ from typing import List
 
 
 def merge_sort(list: List[int]) -> List[int]:
-    """
+    """Merge Sort
+
     Sorting by merging sublists.
     Time complexity O(n log n).
     1. Divide the unsorted list into n sublists, each containing one element.
     2. Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining.
+
+    Args:
+        list (List[int]): a collection with comparable items
+
+    Returns:
+        List[int]: sorted collection
     """
     if len(list) > 1:
         middle = len(list) // 2

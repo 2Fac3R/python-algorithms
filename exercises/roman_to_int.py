@@ -1,6 +1,5 @@
 def roman_to_int(s: str) -> int:
-    """
-    Given a roman numeral, convert it to an integer.
+    """Roman to int
 
     Symbol       Value
     I             1
@@ -15,12 +14,19 @@ def roman_to_int(s: str) -> int:
     X can be placed before L (50) and C (100) to make 40 and 90. 
     C can be placed before D (500) and M (1000) to make 400 and 900.
 
-    >>> roman_to_int("III")
-    3
-    >>> roman_to_int("LVIII")
-    58
-    >>> roman_to_int("MCMXCIV")
-    1994
+    Args:
+        s (str): a roman numeral
+
+    Returns:
+        int: numeral representation
+
+    Tests:
+        >>> roman_to_int("III")
+        3
+        >>> roman_to_int("LVIII")
+        58
+        >>> roman_to_int("MCMXCIV")
+        1994
     """
     roman_to_integer = {
         'I': 1,
@@ -45,4 +51,3 @@ def roman_to_int(s: str) -> int:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    print(roman_to_int('MCMXCIV'))
