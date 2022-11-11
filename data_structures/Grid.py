@@ -1,37 +1,67 @@
-"""
-Grid type class
-Methods:
-    1. Initialize
-    2. Get height
-    3. Get width
-    4. Access item
-    5. String representation
-"""
 from Array import Array
 
 
 class Grid(object):
     """Represents a two-dimensional array."""
 
-    def __init__(self, rows, columns, fill_value=None):
+    def __init__(self, rows: int, columns: int, fill_value: Array = None):
+        """
+        Args:
+            rows (int): number of rows
+            columns (int): number of columns
+            fill_value (Array, optional): array value. Defaults to None.
+        """
         self.data = Array(rows)
         for row in range(rows):
             self.data[row] = Array(columns, fill_value)
 
     def get_height(self):
-        """Returns the number of rows."""
+        """
+        Returns the number of rows.
+        >>> matrix = Grid(3, 1)
+        >>> matrix.get_height()
+        3
+        """
         return len(self.data)
 
     def get_width(self):
-        """Returns the number of columns."""
+        """
+        Returns the number of columns.
+        >>> matrix = Grid(1, 3)
+        >>> matrix.get_width()
+        3
+        """
         return len(self.data[0])
 
     def __getitem__(self, index):
-        """Supports two-dimensional indexing with [row][column]."""
+        """
+        Supports two-dimensional indexing with [row][column].
+        >>> matrix = Grid(3, 3)
+        >>> for row in range(matrix.get_height()):
+        ...     for column in range(matrix.get_width()):
+        ...         matrix[row][column] = row * column
+        >>> print(matrix.__getitem__(1))
+        [0, 1, 2]
+        >>> matrix.__getitem__(1)[2]
+        2
+        >>> matrix[1][2]
+        2
+        """
         return self.data[index]
 
     def __str__(self):
-        """Returns a string representation of the grid."""
+        """
+        Returns a string representation of the grid.
+        >>> matrix = Grid(3, 3)
+        >>> for row in range(matrix.get_height()):
+        ...     for column in range(matrix.get_width()):
+        ...         matrix[row][column] = row * column
+        >>> print(matrix.__str__())
+        0 0 0 
+        0 1 2 
+        0 2 4 
+        <BLANKLINE>
+        """
         result = ""
 
         for row in range(self.get_height()):
@@ -44,18 +74,5 @@ class Grid(object):
 
 
 if __name__ == '__main__':
-    matrix = Grid(3, 3)
-
-    print(matrix)
-
-    for row in range(matrix.get_height()):
-        for column in range(matrix.get_width()):
-            matrix[row][column] = row * column
-
-    print(matrix)
-
-    matrix.get_height()
-    matrix.get_width()
-    matrix.__getitem__(1)
-    matrix.__getitem__(2)[0]
-    matrix.__str__()
+    from doctest import testmod
+    testmod()

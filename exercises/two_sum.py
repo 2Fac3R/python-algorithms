@@ -18,6 +18,20 @@ def two_sum(nums: List[int], target: int) -> List[int]:
         [1, 2]
         >>> two_sum([3, 3], 6)
         [0, 1]
+        >>> two_sum([2, 7, 11, 15], 9)
+        [0, 1]
+        >>> two_sum([15, 2, 11, 7], 13)
+        [1, 2]
+        >>> two_sum([2, 7, 11, 15], 17)
+        [0, 3]
+        >>> two_sum([7, 15, 11, 2], 18)
+        [0, 2]
+        >>> two_sum([2, 7, 11, 15], 26)
+        [2, 3]
+        >>> two_sum([2, 7, 11, 15], 8)
+        []
+        >>> two_sum([3 * i for i in range(10)], 19)
+        []
     """
     # Brute Force - Time: O(n^2) Space: O(1)
     # for i in range(len(nums)):
