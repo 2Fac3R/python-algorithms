@@ -61,6 +61,11 @@ class Grid(object):
         0 1 2 
         0 2 4 
         <BLANKLINE>
+        >>> print(matrix)
+        0 0 0 
+        0 1 2 
+        0 2 4 
+        <BLANKLINE>
         """
         result = ""
 
