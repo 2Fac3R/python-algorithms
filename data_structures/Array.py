@@ -14,7 +14,7 @@ class Array(object):
         for i in range(capacity):
             self.items.append(fill_value)
 
-    def __len__(self):
+    def __len__(self) -> int:
         """
         Returns capacity of the array.
         >>> myList = [1, 5, 2, 3, 4]
@@ -24,7 +24,7 @@ class Array(object):
         """
         return len(self.items)
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Returns string representation of the array.
         >>> myList = [1, 5, 2, 3, 4]
@@ -34,7 +34,7 @@ class Array(object):
         """
         return str(self.items)
 
-    def __iter__(self):
+    def __iter__(self) -> Any:
         """
         Supports traversal with a for loop.
         >>> myList = [1, 5, 2, 3, 4]
@@ -47,7 +47,7 @@ class Array(object):
         """
         return iter(self.items)
 
-    def __getitem__(self, index):
+    def __getitem__(self, index) -> Any:
         """
         Subscrit operator for access at index.
         >>> myList = [1, 5, 2, 3, 4]
@@ -57,7 +57,7 @@ class Array(object):
         """
         return self.items[index]
 
-    def __setitem__(self, index, new_item):
+    def __setitem__(self, index, new_item) -> None:
         """
         Subscript operator for replacement at index.
         >>> myList = [1, 5, 2, 3, 4]
@@ -68,7 +68,7 @@ class Array(object):
         """
         self.items[index] = new_item
 
-    def __sumItems__(self):
+    def __sumItems__(self) -> int:
         """
         Returns the sum of all items.
         >>> myList = [1, 5, 2, 3, 4]

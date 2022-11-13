@@ -2,12 +2,14 @@ from Node import DoubleNode as Node
 
 
 class Queue:
+    """Represents a Queue."""
+
     def __init__(self):
         self.head = None
         self.tail = None
         self.count = 0
 
-    def enqueue(self, data):
+    def enqueue(self, data) -> None:
         """Adds an element to the queue."""
         new_node = Node(data, None, None)
 
@@ -21,7 +23,7 @@ class Queue:
 
         self.count += 1
 
-    def dequeue(self):
+    def dequeue(self) -> Node:
         """Removes an element from the queue."""
         current = self.head
 
@@ -48,5 +50,5 @@ if __name__ == '__main__':
     print(food.head.next.data)
     print(food.tail.data)
 
-    food.dequeue()
+    print(food.dequeue())
     print(food.head.data)

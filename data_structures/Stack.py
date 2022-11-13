@@ -9,7 +9,7 @@ class Stack:
         self.top = None
         self.size = 0
 
-    def push(self, data: Any):
+    def push(self, data: Any) -> None:
         """Appends an element on top
 
         Args:
@@ -31,7 +31,7 @@ class Stack:
 
         self.size += 1
 
-    def pop(self):
+    def pop(self) -> Any:
         """
         Removes and returns the element on top.
         >>> myStack = Stack()
@@ -56,7 +56,7 @@ class Stack:
         else:
             return "The stack is empty"
 
-    def peek(self):
+    def peek(self) -> Any:
         """
         Returns the top node data.
         >>> myStack = Stack()
@@ -70,7 +70,7 @@ class Stack:
         else:
             return "The stack is empty"
 
-    def clear(self):
+    def clear(self) -> None:
         """
         Clears the stack.
         >>> myStack = Stack()
@@ -83,7 +83,7 @@ class Stack:
         while self.top:
             self.pop()
 
-    def __iter__(self):
+    def __iter__(self) -> Any:
         """
         This function is intended for iterators to access
         and iterate through data inside linked list.

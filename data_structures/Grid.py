@@ -1,3 +1,4 @@
+from typing import Any
 from Array import Array
 
 
@@ -15,7 +16,7 @@ class Grid(object):
         for row in range(rows):
             self.data[row] = Array(columns, fill_value)
 
-    def get_height(self):
+    def get_height(self) -> int:
         """
         Returns the number of rows.
         >>> matrix = Grid(3, 1)
@@ -24,7 +25,7 @@ class Grid(object):
         """
         return len(self.data)
 
-    def get_width(self):
+    def get_width(self) -> int:
         """
         Returns the number of columns.
         >>> matrix = Grid(1, 3)
@@ -33,7 +34,7 @@ class Grid(object):
         """
         return len(self.data[0])
 
-    def __getitem__(self, index):
+    def __getitem__(self, index) -> Any:
         """
         Supports two-dimensional indexing with [row][column].
         >>> matrix = Grid(3, 3)
@@ -49,7 +50,7 @@ class Grid(object):
         """
         return self.data[index]
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Returns a string representation of the grid.
         >>> matrix = Grid(3, 3)

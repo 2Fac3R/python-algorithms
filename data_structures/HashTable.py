@@ -1,3 +1,6 @@
+from typing import Any
+
+
 BLANK = object()
 
 
@@ -7,7 +10,7 @@ class HashTable:
     def __init__(self, capacity):
         self.values = capacity * [BLANK]
 
-    def __len__(self):
+    def __len__(self) -> int:
         """
         Returns the length of the Hash Table.
         >>> hashmap = HashTable(5)
@@ -16,7 +19,7 @@ class HashTable:
         """
         return len(self.values)
 
-    def __setitem__(self, key, value):
+    def __setitem__(self, key, value) -> None:
         """
         Inserts a hashed key with value.
         >>> hashmap = HashTable(5)
@@ -29,7 +32,7 @@ class HashTable:
         """
         self.values[self.__hash__(key)] = value
 
-    def __getitem__(self, key):
+    def __getitem__(self, key) -> Any:
         """
         Returns item from its key.
         >>> hashmap = HashTable(5)
@@ -62,7 +65,7 @@ class HashTable:
         else:
             return True
 
-    def get(self, key):
+    def get(self, key) -> Any:
         """
         Returns the value for that key,
         or None if not found.
@@ -79,7 +82,7 @@ class HashTable:
         except KeyError:
             return None
 
-    def __delitem__(self, key):
+    def __delitem__(self, key) -> None:
         """
         Deletes (rewrites to BLANK) item.
         >>> hashmap = HashTable(5)
