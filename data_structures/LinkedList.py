@@ -32,7 +32,7 @@ class LinkedList:
 
     def __len__(self) -> int:
         """
-        Return length of linked list i.e. number of nodes
+        Return length of linked list (number of nodes)
         >>> linked_list = LinkedList()
         >>> len(linked_list)
         0
@@ -53,7 +53,7 @@ class LinkedList:
 
     def __repr__(self) -> str:
         """
-        String representation/visualization of a Linked Lists
+        String representation/visualization of a Linked List
         >>> linked_list = LinkedList()
         >>> linked_list.insert_tail(1)
         >>> linked_list.insert_tail(3)
@@ -85,9 +85,9 @@ class LinkedList:
             if i == index:
                 return node
 
-    # Used to change the data of a particular node
     def __setitem__(self, index: int, data: Any) -> None:
         """
+        Insertion Support. Used to change the data of a particular node
         >>> linked_list = LinkedList()
         >>> for i in range(0, 10):
         ...     linked_list.insert_nth(i, i)
@@ -112,6 +112,23 @@ class LinkedList:
         for i in range(index):
             current = current.next
         current.data = data
+
+    def __add__(self, linked_list) -> Any:
+        """
+        Merge two linked lists together.
+        >>> linked_list = LinkedList()
+        >>> linked_list2 = LinkedList()
+        >>> linked_list.insert_tail("first")
+        >>> linked_list.insert_tail("second")
+        >>> linked_list2.insert_tail("one")
+        >>> linked_list2.insert_tail("two")
+        >>> merged = linked_list + linked_list2
+        >>> print(merged)
+        first->second->one->two
+        """
+        for node in linked_list:
+            self.insert_tail(node)
+        return self
 
     def insert_tail(self, data: Any) -> None:
         """
@@ -317,3 +334,8 @@ class LinkedList:
             current = next_node
         # Return prev in order to put the head at the end
         self.head = prev
+
+
+if __name__ == '__main__':
+    from doctest import testmod
+    testmod()
