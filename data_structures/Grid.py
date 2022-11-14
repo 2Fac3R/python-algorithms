@@ -73,10 +73,30 @@ class Grid(object):
         for row in range(self.get_height()):
             for col in range(self.get_width()):
                 result += str(self.data[row][col]) + " "
-
             result += "\n"
 
         return str(result)
+
+    def transpose(self) -> None:
+        """
+        The transpose of a matrix is found by interchanging 
+        its rows into columns or columns into rows.
+        >>> matrix = Grid(3, 2)
+        >>> for row in range(matrix.get_height()):
+        ...     for column in range(matrix.get_width()):
+        ...         matrix[row][column] = row * column
+        >>> print(matrix)
+        0 0 
+        0 1 
+        0 2 
+        <BLANKLINE>
+        >>> matrix.transpose()
+        >>> print(matrix)
+        0 0 0 
+        0 1 2 
+        <BLANKLINE>
+        """
+        self.data = list(zip(*self))
 
 
 if __name__ == '__main__':
