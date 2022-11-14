@@ -10,7 +10,20 @@ class Queue:
         self.count = 0
 
     def enqueue(self, data) -> None:
-        """Adds an element to the queue."""
+        """
+        Adds an element to the queue.
+
+        >>> food = Queue()
+        >>> food.enqueue('eggs')
+        >>> food.enqueue('ham')
+        >>> food.enqueue('spam')
+        >>> print(food.head.data)
+        eggs
+        >>> print(food.head.next.data)
+        ham
+        >>> print(food.tail.data)
+        spam
+        """
         new_node = Node(data, None, None)
 
         if self.head is None:
@@ -24,7 +37,17 @@ class Queue:
         self.count += 1
 
     def dequeue(self) -> Node:
-        """Removes an element from the queue."""
+        """
+        Removes an element from the queue.
+        >>> food = Queue()
+        >>> food.enqueue('eggs')
+        >>> food.enqueue('ham')
+        >>> food.enqueue('spam')
+        >>> food.dequeue().data
+        'eggs'
+        >>> print(food.head.data)
+        ham
+        """
         current = self.head
 
         if self.count == 1:
@@ -40,15 +63,5 @@ class Queue:
 
 
 if __name__ == '__main__':
-    food = Queue()
-
-    food.enqueue('eggs')
-    food.enqueue('ham')
-    food.enqueue('spam')
-
-    print(food.head.data)
-    print(food.head.next.data)
-    print(food.tail.data)
-
-    print(food.dequeue())
-    print(food.head.data)
+    from doctest import testmod
+    testmod()
