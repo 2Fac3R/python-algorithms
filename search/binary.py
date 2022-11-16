@@ -1,41 +1,45 @@
-def binary(sequence: list, beginning: int, end: int, target: int) -> bool:
-    """Binary Search
+from typing import Any
+
+
+def binary_search_r(sequence: list, target: int, beginning: int, end: int) -> Any:
+    """Binary Search (Recursive) - O(log n)
+
+    https://en.wikipedia.org/wiki/binary_search_algorithm
 
     Args:
-        sequence (list): a collection with comparable items
+        sequence (list): a sorted collection with comparable items
+        target (int): item value to search
         beginning (int): position to start looking for
         end (int): final position
-        target (int): item value to search
 
     Returns:
-        bool: True if target is found, or False otherwise
+        int | None: target if found, or None otherwise
+
+    Tests:
+        >>> sequence = [2, 3, 10, 10, 14, 19, 20, 22, 26, 31, 33, 33, 39, 47]
+        >>> n = len(sequence)
+        >>> binary_search_r(sequence, 18, n, 0)  # None
+        >>> binary_search_r(sequence, 18, 0, n)  # None
+        >>> binary_search_r(sequence, 14, 0, n)  # left
+        14
+        >>> binary_search_r(sequence, 22, 0, n)  # mid
+        22
+        >>> binary_search_r(sequence, 26, 0, n)  # right
+        26
     """
-    print(
-        f'Looking for {target} between {sequence[beginning]} and {sequence[end - 1]}')
     if beginning > end:
-        return False
+        return None
 
     mid = (beginning + end) // 2
 
-    if sequence[mid] == target:
-        return True
-    elif sequence[mid] < target:
-        return binary(sequence, mid + 1, end, target)
-    else:
-        return binary(sequence, beginning, mid - 1, target)
+    if sequence[mid] == target:  # mid
+        return sequence[mid]
+    elif sequence[mid] > target:  # left
+        return binary_search_r(sequence, target, beginning, mid - 1)
+    else:  # right
+        return binary_search_r(sequence, target, mid + 1, end)
 
 
 if __name__ == '__main__':
-    import random
-
-    n: int = int(input('Enter list length: '))
-    target: int = int(input('Search: '))
-
-    sequence: list = sorted([random.randint(0, 100)
-                             for i in range(n)])
-
-    found: bool = binary(sequence, 0, len(sequence), target)
-
-    print(sequence)
-    print(
-        f'{target} {"found" if found else "not found"}.')
+    from doctest import testmod
+    testmod()
