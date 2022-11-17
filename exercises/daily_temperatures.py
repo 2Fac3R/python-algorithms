@@ -3,6 +3,7 @@ from typing import Deque, List
 
 def daily_temperatures(temperatures: List[int]) -> List[int]:
     """Daily Temperatures
+
     Given an array of integers temperatures that represents the daily temperatures,
     return an array answer such that answer[i] is the number of days
     you have to wait after the ith day to get a warmer temperature.
@@ -46,4 +47,3 @@ def daily_temperatures(temperatures: List[int]) -> List[int]:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    daily_temperatures([73, 74, 75, 71, 69, 72, 76, 73])

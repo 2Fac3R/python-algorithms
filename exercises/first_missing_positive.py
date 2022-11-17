@@ -30,4 +30,3 @@ def first_missing_positive(nums: List[int]) -> int:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    first_missing_positive([1, 2, 0])
