@@ -7,7 +7,11 @@ BLANK = object()
 class HashTable:
     """Represents a Hash Table."""
 
-    def __init__(self, capacity):
+    def __init__(self, capacity: int):
+        """
+        Args:
+            capacity (int): static size of the hash table.
+        """
         self.values = capacity * [BLANK]
 
     def __len__(self) -> int:
@@ -18,6 +22,13 @@ class HashTable:
         5
         """
         return len(self.values)
+
+    def __hash__(self, key) -> int:
+        """
+        Returns the hash function.
+        Hash mapping function: hash(key) % len(self)
+        """
+        return hash(key) % len(self)
 
     def __setitem__(self, key, value) -> None:
         """
@@ -38,9 +49,11 @@ class HashTable:
         >>> hashmap = HashTable(5)
         >>> key = 'key_test'
         >>> value = 'test'
-        >>> hashmap[key] = value
-        >>> # hashmap.__getitem__(key)
-        >>> hashmap[key]
+        >>> hashed_key = hashmap.__hash__(key)
+        >>> hashmap[hashed_key] = value
+        >>> hashmap.__getitem__(hashed_key)
+        'test'
+        >>> hashmap[hashed_key]
         'test'
         """
         value = self.values[self.__hash__(key)]
@@ -52,11 +65,13 @@ class HashTable:
         """
         Returns bool if key is in the hashmap.
         >>> hashmap = HashTable(5)
-        >>> hashmap['hello'] = 'world'
-        >>> hashmap.__contains__('hello')
+        >>> key = 'hello'
+        >>> hashed_key = hashmap.__hash__(key)
+        >>> hashmap[hashed_key] = 'world'
+        >>> hashmap.__contains__(hashed_key)
         True
-        >>> hashmap.__contains__('non-existing')
-        False
+        >>> hashed_key in hashmap
+        True
         """
         try:
             self[key]
@@ -72,10 +87,10 @@ class HashTable:
         >>> hashmap = HashTable(5)
         >>> key = 'key_test'
         >>> value = 'test'
-        >>> hashmap[key] = value
-        >>> hashmap.get(key)
+        >>> hashed_key = hashmap.__hash__(key)
+        >>> hashmap[hashed_key] = value
+        >>> hashmap.get(hashed_key)
         'test'
-        >>> hashmap.get('non-existing')
         """
         try:
             return self[key]
@@ -88,24 +103,25 @@ class HashTable:
         >>> hashmap = HashTable(5)
         >>> key = 'key_test'
         >>> value = 'test'
-        >>> hashmap[key] = value
-        >>> hashmap.get(key)
+        >>> hashed_key = hashmap.__hash__(key)
+        >>> hashmap[hashed_key] = value
+        >>> hashmap.get(hashed_key)
         'test'
-        >>> hashmap.__delitem__(key)
-        >>> hashmap.get(key)
-        >>> hashmap.get('non-existing')
+        >>> hashmap.__delitem__(hashed_key)
+        >>> hashmap.get(hashed_key)
+        >>> hashmap.__delitem__('aaaa')
+        Traceback (most recent call last):
+        ...
+        KeyError: 'aaaa'
+        >>> del hashmap['bbbb']
+        Traceback (most recent call last):
+        ...
+        KeyError: 'bbbb'
         """
         if key in self:
             self[key] = BLANK
         else:
             raise KeyError(key)
-
-    def __hash__(self, key) -> int:
-        """
-        Returns the hash function.
-        Hash mapping function: hash(key) % len(self)
-        """
-        return hash(key) % len(self)
 
 
 if __name__ == '__main__':
