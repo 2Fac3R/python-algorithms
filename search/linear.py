@@ -1,5 +1,8 @@
 def linear(sequence: list, target: int) -> int:
-    """Linear Search
+    """Linear Search - O(n/2)
+
+    https://en.wikipedia.org/wiki/Linear_search
+
     Args:
         sequence (list): a collection with comparable items
         target (int): item value to search
