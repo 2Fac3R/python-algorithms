@@ -20,11 +20,13 @@ def generate_pie_chart(labels, values, file_name):
 
 if __name__ == '__main__':
     import read_csv
+
     data = read_csv.read_csv('datasets/world_population.csv')
-    data = list(
+    south_america = list(
         filter(lambda item: item['Continent'] == 'South America', data))
-    countries = list(map(lambda x: x['CCA3'], data))
-    percentages = list(map(lambda x: x['World Population Percentage'], data))
+    countries = list(map(lambda x: x['CCA3'], south_america))
+    percentages = list(
+        map(lambda x: x['World Population Percentage'], south_america))
 
     generate_bar_chart(countries, percentages, 'countries',
                        'percentages', 'img/bar.png')

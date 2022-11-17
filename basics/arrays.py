@@ -1,6 +1,6 @@
-import array
-
 if __name__ == '__main__':
+    import array
+
     myArray = array.array('i', [300, 100, 500, 200])
 
     myArray.insert(1, 1)
@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     print(myArray[1])
     print(myArray.index(200))
-    print(myArray)
+    print(myArray.tolist())
 
     for item in myArray:
         print(item)

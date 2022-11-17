@@ -1,4 +1,3 @@
-import csv
 from typing import Dict, List
 
 
@@ -11,6 +10,8 @@ def read_csv(path: str) -> List[Dict[str, str]]:
     Returns:
         List[Dict[str, str]]: data
     """
+    import csv
+
     with open(path, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         header = next(reader)
