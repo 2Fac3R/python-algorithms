@@ -2,33 +2,32 @@ from typing import List
 
 
 def bubble(list: List[int]) -> List[int]:
-    """Bubble Sort
+    """Bubble Sort - O(n^2)
+
+    https://en.wikipedia.org/wiki/Bubble_sort
 
     Sorting by swaping elements.
-    Time complexity O(n) * O(n) = O(n * n) = O(n^2).
 
     Args:
         list (List[int]): a collection with comparable items
 
     Returns:
-        List[int]: sorted collection 
+        List[int]: sorted collection
+
+    Tests:
+        >>> collection = [30, 96, 73, 75, 98, 14, 35, 63, 42, 38]
+        >>> print(bubble(collection))
+        [14, 30, 35, 38, 42, 63, 73, 75, 96, 98]
     """
     n: int = len(list)
 
     for i in range(n):
         for j in range(0, n - i - 1):
             if list[j] > list[j + 1]:
-                list[j], list[j + 1] = list[j + 1], list[j]
+                list[j], list[j + 1] = list[j + 1], list[j]  # swap
     return list
 
 
 if __name__ == '__main__':
-    import random
-
-    n: int = int(input('Enter list length: '))
-
-    list: List[int] = [random.randint(0, 100) for i in range(n)]
-    print(list)
-
-    sorted_list: List[int] = bubble(list)
-    print(sorted_list)
+    from doctest import testmod
+    testmod()
