@@ -1,4 +1,4 @@
-def linear(sequence: list, target: int) -> int:
+def linear_search(sequence: list, target: int) -> int:
     """Linear Search - O(n/2)
 
     https://en.wikipedia.org/wiki/Linear_search
@@ -11,11 +11,11 @@ def linear(sequence: list, target: int) -> int:
         int: index of found item, or -1 if item is not found
 
     Tests:
-        >>> linear([], 1)
+        >>> linear_search([], 1)
         -1
-        >>> linear([2, 9, 1], 0)
+        >>> linear_search([2, 9, 1], 0)
         -1
-        >>> linear([2, 9, 1], 1)
+        >>> linear_search([2, 9, 1], 1)
         2
     """
     for index, element in enumerate(sequence):

@@ -1,7 +1,7 @@
 from typing import List
 
 
-def insertion(list: List[int]) -> List[int]:
+def insertion_sort(list: List[int]) -> List[int]:
     """Insertion Sort - O(n^2)
 
     https://en.wikipedia.org/wiki/Insertion_sort
@@ -16,7 +16,7 @@ def insertion(list: List[int]) -> List[int]:
 
     Tests:
         >>> collection = [79, 53, 10, 85, 13, 60, 11, 69, 99, 56]
-        >>> print(insertion(collection))
+        >>> print(insertion_sort(collection))
         [10, 11, 13, 53, 56, 60, 69, 79, 85, 99]
     """
     for i in range(1, len(list)):
