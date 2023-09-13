@@ -23,8 +23,8 @@ def add_taxes(item):
     return item
 
 
-# new_items = list(map(add_taxes, items))
-new_items = list(map(lambda item: item['price'] * .19, items))
+# new_prices = list(map(add_taxes, items))
+new_prices = list(map(lambda item: item['price'] * .19, items))
 
-# print(new_items)
 print(items)
+print(new_prices)

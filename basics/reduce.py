@@ -16,4 +16,6 @@ items = [
 ]
 
 prices = list(map(lambda item: item['price'], items))
-sum = reduce(lambda x, y: x+y, prices)
+sum = reduce(lambda x, y: x + y, prices)
+
+print(sum)

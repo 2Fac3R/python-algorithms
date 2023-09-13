@@ -9,7 +9,6 @@ def get_name(worker: str) -> str:
 if __name__ == '__main__':
     import json
 
-    # f = open('json/workers.json')
     with open('json/workers.json', 'r') as f:
         data = json.load(f)
 
@@ -20,13 +19,14 @@ if __name__ == '__main__':
         worker for worker in data if worker['position'] == 'UX Designer']
 
     # Lambda - High Order Functions
-    younger = list(filter(lambda worker: worker['age'] < 18, data))
+    younger = list(filter(lambda worker: int(worker['age']) < 18, data))
     younger_names = list(map(lambda worker: worker['name'], younger))
 
     # Functions - High Order Functions
     # younger = list(filter(is_younger, data))
     # younger_names = list(map(get_name, younger))
 
-    print(python_devs)
-    print(ux_designers)
-    # print(younger_names)
+    # print(python_devs)
+    # print(ux_designers)
+    print(younger)
+    print(younger_names)
