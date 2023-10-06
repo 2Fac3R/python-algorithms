@@ -22,7 +22,8 @@ def merge(nums1: List[int], nums2: List[int]) -> List[int]:
         [1]
     """
     merge = nums1 + nums2
-    merge = sorted(list(filter(lambda x: x != 0, merge)))  # sorts and removes zeros
+    # sorts and removes zeros
+    merge = sorted(list(filter(lambda x: x != 0, merge)))
     return merge
 
 
