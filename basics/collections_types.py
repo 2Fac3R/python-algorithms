@@ -50,4 +50,4 @@ print(items_sym_diff)
 
 # Traversing a dict
 for key, value in my_dict.items():
-    print(f"{key}:{value}")
+    print(f"{key}\n\tName: {value['name']}\n\tYear: {value['year']}")
