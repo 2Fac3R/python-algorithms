@@ -1,5 +1,6 @@
 # import pip._vendor.requests as requests
-import requests, json
+import requests
+import json
 
 endpoint = 'https://rickandmortyapi.com/api/character'
 
