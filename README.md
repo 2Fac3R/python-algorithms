@@ -57,6 +57,7 @@ Implementations are for learning purposes only. They may be less efficient than 
 
 ## Basics
 
+- [apis](basics/apis.py)
 - [arrays](basics/arrays.py)
 - [charts](basics/charts.py)
 - [collections](basics/collections.py)
@@ -69,3 +70,4 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [read_csv](basics/read_csv.py)
 - [reduce](basics/reduce.py)
 - [test](basics/test.py)
+- [typing](basics/typing_test.py)
