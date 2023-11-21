@@ -42,6 +42,10 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [Set zeroes](problems/set_zeroes.py)
 - [Two sum](problems/two_sum.py)
 
+## Offtopic
+
+- [FrenchDeck](offtopic/FrenchDeck.py)
+
 ## Optimization
 
 - [Knapsack](optimization/knapsack.py)
@@ -54,6 +58,7 @@ Implementations are for learning purposes only. They may be less efficient than 
 
 - [Factorial](math/factorial.py)
 - [Fibonacci](math/fib.py)
+- [Vector2d](math/vector2d.py)
 
 ## Basics
 
