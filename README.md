@@ -76,3 +76,4 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [reduce](basics/reduce.py)
 - [test](basics/test.py)
 - [typing](basics/typing_test.py)
+- [tupels](basics/tuples.py)
