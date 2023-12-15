@@ -41,6 +41,7 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [Roman to int](problems/roman_to_int.py)
 - [Set zeroes](problems/set_zeroes.py)
 - [Two sum](problems/two_sum.py)
+- [Valid parentheses](problemas/valid_parentheses)
 
 ## Offtopic
 
