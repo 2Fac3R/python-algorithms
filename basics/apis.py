@@ -2,9 +2,9 @@
 import requests
 import json
 
-endpoint = 'https://rickandmortyapi.com/api/character'
+api_url = 'https://rickandmortyapi.com/api'
 
-response = requests.get(endpoint)
+response = requests.get(f"{api_url}/character")
 data = json.loads(response.text)
 
 # print(data['info'])
