@@ -50,6 +50,7 @@ Implementations are for learning purposes only. They may be less efficient than 
 ## Optimization
 
 - [Knapsack](optimization/knapsack.py)
+- [List comprehensions speed](optimization/listcomp_speed.py)
 
 ## Games
 
@@ -78,3 +79,4 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [test](basics/test.py)
 - [typing](basics/typing_test.py)
 - [tupels](basics/tuples.py)
+- [match/case](basics/match_case.py)
