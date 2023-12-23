@@ -46,6 +46,7 @@ Implementations are for learning purposes only. They may be less efficient than 
 ## Offtopic
 
 - [FrenchDeck](offtopic/FrenchDeck.py)
+- [Get creators](offtopic/creator.py)
 
 ## Optimization
 
