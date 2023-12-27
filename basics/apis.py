@@ -1,4 +1,3 @@
-# import pip._vendor.requests as requests
 import requests
 import json
 
@@ -16,4 +15,4 @@ data = json.loads(response.text)
 characters = data['results']
 
 for character in characters:
-    print(character['name'])
+    print(f"{character['name']} from {character['origin']['name']}")
