@@ -81,3 +81,4 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [typing](basics/typing_test.py)
 - [tupels](basics/tuples.py)
 - [match/case](basics/match_case.py)
+- [Class patterns](basics/class_patterns.py)
