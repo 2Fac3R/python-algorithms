@@ -26,6 +26,7 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [Insertion sort](sorting/insertion_sort.py)
 - [Merge sort](sorting/merge_sort.py)
 - [Selection sort](sorting/selection_sort.py)
+- [sorted() with key](sorting/sorting.py)
 
 ## Problems
 
