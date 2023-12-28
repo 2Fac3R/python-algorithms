@@ -1,4 +1,4 @@
-from typing import Awaitable, Callable, Literal, Sequence
+from typing import Awaitable, Callable, Literal, Sequence, Optional
 
 # Type aliases - The type statement is new in Python 3.12
 type Number = list[int | float]
@@ -27,7 +27,7 @@ def broadcast_message(message: str, servers: Sequence[Server]) -> None:
 """
 
 
-def feeder(get_next_item: Callable[[], str]) -> None:
+def feeder(get_next_item: Callable[[], str], item: Optional[str] = None) -> None:
     pass
 
 
