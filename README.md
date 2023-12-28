@@ -79,6 +79,6 @@ Implementations are for learning purposes only. They may be less efficient than 
 - [reduce](basics/reduce.py)
 - [test](basics/test.py)
 - [typing](basics/typing_test.py)
-- [tupels](basics/tuples.py)
+- [tuples](basics/tuples.py)
 - [match/case](basics/match_case.py)
 - [Class patterns](basics/class_patterns.py)
