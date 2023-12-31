@@ -19,5 +19,5 @@ def remove_duplicates(dups: list = []) -> list:
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

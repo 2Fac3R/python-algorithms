@@ -45,5 +45,5 @@ def daily_temperatures(temperatures: List[int]) -> List[int]:
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

@@ -25,5 +25,5 @@ def convert_phrase_to_dict(phrase: str) -> Dict[str, int]:
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

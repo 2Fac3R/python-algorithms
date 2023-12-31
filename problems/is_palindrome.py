@@ -20,11 +20,11 @@ def is_palindrome(s: str) -> bool:
         >>> is_palindrome(" ")
         True
     """
-    # s = [i for i in s.lower() if i.isalnum()]
-    s = ''.join(filter(str.isalnum, s)).lower()
-    return s == s[::-1]
+    # text = ''.join(filter(str.isalnum, s)).lower()
+    text: list[str] = [c for c in s.lower() if c.isalnum()]
+    return text == text[::-1]
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

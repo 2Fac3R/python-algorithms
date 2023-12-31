@@ -19,7 +19,7 @@ def first_missing_positive(nums: List[int]) -> int:
         1
     """
     unique = set(nums)
-    i = 1
+    i: int = 1
 
     while i in unique:
         i += 1
@@ -28,5 +28,5 @@ def first_missing_positive(nums: List[int]) -> int:
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

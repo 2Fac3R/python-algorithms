@@ -26,14 +26,14 @@ def is_parentheses_valid(s: str) -> bool:
         True
     """
     # Create a dictionary to map open brackets to their corresponding close brackets.
-    brackets = {
+    brackets: dict[str, str] = {
         "(": ")",
         "{": "}",
         "[": "]",
     }
 
     # Create a stack to store the open brackets.
-    stack = []
+    stack: list[str] = []
 
     # Iterate over the characters in the string.
     for char in s:
@@ -53,5 +53,5 @@ def is_parentheses_valid(s: str) -> bool:
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

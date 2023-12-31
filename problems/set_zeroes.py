@@ -19,8 +19,8 @@ def set_zeroes(matrix: List[List[int]]) -> None:
         >>> matrix
         [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
     """
-    rows_len = len(matrix)
-    columns_len = len(matrix[0])
+    rows_len: int = len(matrix)
+    columns_len: int = len(matrix[0])
     rows, cols = set(), set()
 
     # Essentially, we mark the rows and columns that are to be made zero

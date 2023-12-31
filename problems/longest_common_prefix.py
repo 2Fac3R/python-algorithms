@@ -8,7 +8,7 @@ def longest_common_prefix(strs: List[str]) -> str:
         strs (List[str]): A list of strings
 
     Returns:
-        str: A string representing the longest common prefix, 
+        str: A string representing the longest common prefix,
                 or an empty string if there is no common prefix.
 
     Tests
@@ -46,5 +46,5 @@ def longest_common_prefix(strs: List[str]) -> str:
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

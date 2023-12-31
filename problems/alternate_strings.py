@@ -32,5 +32,5 @@ def alternate_strings(first_str: str, second_str: str) -> str:
 
 
 if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

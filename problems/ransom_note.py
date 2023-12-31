@@ -28,5 +28,5 @@ def can_construct(ransom_note: str, magazine: str) -> bool:
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

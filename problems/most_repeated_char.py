@@ -45,12 +45,12 @@ def most_repeated_character(s: str) -> str:
     # print(counter)
 
     # Get the key with the higher value
-    most_repeated_char = max(counter, key=counter.get)
+    most_repeated_char = max(counter, key=counter.get)  # type: ignore
     # print(most_repeated_char)
 
     return most_repeated_char
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()
