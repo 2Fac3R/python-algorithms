@@ -1,6 +1,3 @@
-from functools import reduce
-
-
 def roman_to_int(s: str) -> int:
     """Roman to int
 

@@ -23,10 +23,11 @@ def merge(nums1: List[int], nums2: List[int]) -> List[int]:
     """
     merge: List[int] = nums1 + nums2
     # sorts and removes zeros
-    merge = sorted(list(filter(lambda x: x != 0, merge)))
+    # merge = sorted(list(filter(lambda x: x != 0, merge)))
+    merge = sorted([x for x in merge if x != 0])
     return merge
 
 
 if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
+    from doctest import testmod
+    testmod()

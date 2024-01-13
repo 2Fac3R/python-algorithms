@@ -21,32 +21,28 @@ def most_repeated_character(s: str) -> str:
         >>> most_repeated_character('Sasss76S5dssfsffS')
         's'
     """
-    # Check if s in empty
+    # Check if s is empty
     if len(s) == 0:
         return ''
 
-    chars: list = list(s)
+    chars: list[str] = list(s)
 
     # Clear any non-alphabet letters in s
-    non_alpha_letters: list = list(filter(lambda c: c.isalpha(), chars))
-    # print(non_alpha_letters)
+    non_alpha_letters: list[str] = [c for c in chars if c.isalpha()]
 
     # Check if the list of non-alphabet letters is empty
     if non_alpha_letters == []:
         return ''
 
     # Get unique letters
-    unique: list = list(set(non_alpha_letters))
-    # print(unique)
+    unique: list[str] = list(set(non_alpha_letters))
 
     # Store in a dict each letter with its number of ocurrencecs in non_alpha_letters
     counter: dict[str, int] = {
         char: non_alpha_letters.count(char) for char in unique}
-    # print(counter)
 
     # Get the key with the higher value
     most_repeated_char = max(counter, key=counter.get)  # type: ignore
-    # print(most_repeated_char)
 
     return most_repeated_char
 

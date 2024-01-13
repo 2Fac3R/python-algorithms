@@ -24,17 +24,15 @@ def daily_temperatures(temperatures: List[int]) -> List[int]:
         >>> daily_temperatures([30, 60, 90])
         [1, 1, 0]
     """
+    n: int = len(temperatures)
+    answer: List[int] = [0] * n
     # Brute Force O(n^2)
-    # n: int = len(temperatures)
-    # answer: List[int] = [0] * n
     # for i in range(n):
     #     for j in range(i + 1, n):
     #         if temperatures[j] > temperatures[i]:
     #             answer[i] = j - i
     #             break
     # Stack O(2n)
-    n: int = len(temperatures)
-    answer: List[int] = [0] * n
     stack: Deque = Deque()
     for i in range(n):
         while stack and temperatures[stack[-1]] < temperatures[i]:
