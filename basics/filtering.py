@@ -9,7 +9,7 @@ def get_name(worker: str) -> str:
 if __name__ == '__main__':
     import json
 
-    with open('json/workers.json', 'r') as f:
+    with open('../json/workers.json', 'r') as f:
         data = json.load(f)
 
     # Lists comprehensions

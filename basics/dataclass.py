@@ -1,7 +1,10 @@
 from dataclass import dataclass
 
+# Dataclass is a decorator that automatically generates special methods for classes
+# such as __init__, __repr__, __eq__, and __hash__ based on class attributes.
 
-@dataclass(frozen=True)
+
+@dataclass(frozen=True) # frozen=True makes the class immutable
 class Coordinate:
     lat: float
     lon: float

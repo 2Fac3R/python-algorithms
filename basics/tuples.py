@@ -1,20 +1,38 @@
 """
     Tuples are not just immutable lists
 """
-from collections import namedtuple
+# from collections import namedtuple
+from typing import NamedTuple
 
 # typing
-City = namedtuple('City', ['name', 'country', 'population', 'coordinates'])
-Coordinates = namedtuple('Coordinates', ['latitude', 'longitude'])
+# City = namedtuple('City', ['name', 'country', 'population', 'coordinates'])
+# Coordinates = namedtuple('Coordinates', ['latitude', 'longitude'])
 
-# Tuples as records
+
+class Coordinates(NamedTuple):
+    latitude: float
+    longitude: float
+
+
+class City(NamedTuple):
+    name: str
+    country: str
+    population: float
+    coordinates: Coordinates
+
+
+class Traveler(NamedTuple):
+    country_code: str
+    passport_number: str
+
 
 # Latitude and longitude of the Los Angeles International Airport.
 lax_coordinates: Coordinates = Coordinates(33.9425, -118.408056)
 # Tokyo: name, year, population (thousands), population change (%), and area (km²).
 city, year, pop, chg, area = ('Tokyo', 2003, 32_450, 0.66, 8014)
 # (country_code, passport_number)
-traveler_ids = [('USA', '31195855'), ('BRA', 'CE342567'), ('ESP', 'XDA205856')]
+traveler_ids: list[Traveler] = [
+    ('USA', '31195855'), ('BRA', 'CE342567'), ('ESP', 'XDA205856')]
 
 for passport in sorted(traveler_ids):
     print('%s/%s' % passport)

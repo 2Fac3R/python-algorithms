@@ -1,5 +1,5 @@
 # Book: Fluent Python. Example 7-8
-import random
+from random import shuffle
 
 
 class BingoCage:
@@ -22,7 +22,7 @@ class BingoCage:
 
     def __init__(self, items: list) -> None:
         self._items = list(items)
-        random.shuffle(self._items)
+        shuffle(self._items)
 
     def pick(self):
         try:

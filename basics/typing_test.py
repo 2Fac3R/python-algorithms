@@ -1,10 +1,10 @@
 from typing import Awaitable, Callable, Literal, Sequence, Optional
 
 # Type aliases - The type statement is new in Python 3.12
-type Number = list[int | float]
-type Vector = list[float]
+type Number = int | float
+type Vector = list[Number, Number]
 type ConnectionOptions = dict[str, str]
-type Address = tuple[str, int]
+type Address = tuple[str, Number]
 type Server = tuple[Address, ConnectionOptions]
 
 
@@ -27,7 +27,7 @@ def broadcast_message(message: str, servers: Sequence[Server]) -> None:
 """
 
 
-def feeder(get_next_item: Callable[[], str], item: Optional[str] = None) -> None:
+def feeder(get_next_item: Callable[[int], str], item: Optional[str] = None) -> None:
     pass
 
 

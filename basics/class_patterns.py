@@ -22,7 +22,7 @@ def match_asian_cities(cities: List[City]) -> List[City]:
         >>> city2 = City('North America', 'Mexico City', 'MX')
         >>> city3 = City('Asia', 'Beijing', 'CN')
         >>> city4 = City('North America', 'Los Angeles', 'US')
-        >>> cities = [city1, city2, city3]
+        >>> cities = [city1, city2, city3, city4]
         >>> match_asian_cities(cities)
         [City(continent='Asia', name='Tokyo', country='JP'), City(continent='Asia', name='Beijing', country='CN')]
     """
