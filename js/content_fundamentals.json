@@ -1,0 +1,4 @@
+[
+    { "name": "Big O Notation", "theory": "./training/fundamentals/00_big_o_notation.md", "exam": {"path": "./exams/00_exam_big_o.md", "solution": "./exams/solutions/00_solution_big_o.md"}, "cheatsheet": "./cheatsheets/00_big_o_cheatsheet.md" },
+    { "name": "Python Fundamentals", "theory": "./training/fundamentals/00_python_fundamentals.md", "exam": {"path": "./exams/01_exam_python_fundamentals.md", "solution": "./exams/solutions/01_solution_python_fundamentals.md"}, "cheatsheet": "./cheatsheets/00_python_fundamentals_cheatsheet.md" }
+]

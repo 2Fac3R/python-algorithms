@@ -1,85 +1,39 @@
-# Algorithms in Python
+# Python Interview Training Plan
 
-Implementations are for learning purposes only. They may be less efficient than the implementations in the Python standard library.
+This repository contains a comprehensive, practical training plan for achieving a powerful level in Python for technical interviews. The plan is structured around mastering problem-solving techniques and fundamental software design principles.
 
-# List of Algorithms
+## How to Use
 
-## Data Structures
+The best way to navigate this project is by opening the `index.html` file in your web browser. It provides an interactive, single-page interface to all the training materials.
 
-- [Array](data_structures/Array.py)
-- [Grid](data_structures/Grid.py)
-- [HashTable](data_structures/HashTable.py)
-- [LinkedList](data_structures/LinkedList.py)
-- [ListQueue](data_structures/ListQueue.py)
-- [Node](data_structures/Node.py)
-- [Queue](data_structures/Queue.py)
-- [Stack](data_structures/Stack.py)
+To run it locally, you can use Python's built-in web server:
+```bash
+python3 -m http.server
+```
+Then, open `http://localhost:8000` in your browser.
 
-## Searching
+## Content Overview
 
-- [Binary search](searching/binary_search.py)
-- [Linear search](searching/linear_search.py)
+The training plan is divided into three main sections:
 
-## Sorting
+### I. Fundamentals
+This section covers the essential prerequisite knowledge for the entire course, including:
+- **Big O Notation:** For analyzing algorithm complexity.
+- **Python Fundamentals:** A review of core Python concepts relevant to interviews.
 
-- [Bubble sort](sorting/bubble_sort.py)
-- [Insertion sort](sorting/insertion_sort.py)
-- [Merge sort](sorting/merge_sort.py)
-- [Selection sort](sorting/selection_sort.py)
-- [sorted() with key](sorting/sorting.py)
+### II. Problem-Solving Techniques
+This is the core of the plan, focusing on a pattern-based approach to problem-solving. It covers 17 essential techniques, from foundational patterns to advanced algorithms, each with:
+- Detailed theory explanations.
+- Practical coding challenges with tests.
+- Optimal solutions.
+- Short exams to reinforce understanding.
+- Concise cheatsheets for quick review.
 
-## Problems
+### III. Design Patterns
+This section provides a deep dive into 24 fundamental software design patterns, categorized into Creational, Structural, and Behavioral groups. Similar to the techniques section, each pattern includes:
+- In-depth theory.
+- A practical coding challenge and solution.
+- An exam with solutions.
+- A quick-reference cheatsheet.
 
-- [Alternate strings](problems/alternate_strings.py)
-- [Convert phrase to dict](problems/convert_phrase_to_dict.py)
-- [Daily temperatures](problems/daily_temperatures.py)
-- [First missing positive](problems/first_missing_positive.py)
-- [Generate parentheses](problems/generate_parentheses.py)
-- [Is palindrome](problems/is_palindrome.py)
-- [Merge sorted array](problems/merge.py)
-- [Ransom note](problems/ransom_note.py)
-- [Remove duplicates](problems/remove_duplicates.py)
-- [Roman to int](problems/roman_to_int.py)
-- [Set zeroes](problems/set_zeroes.py)
-- [Two sum](problems/two_sum.py)
-- [Valid parentheses](problemas/valid_parentheses)
-
-## Offtopic
-
-- [FrenchDeck](offtopic/FrenchDeck.py)
-- [Get creators](offtopic/creator.py)
-
-## Optimization
-
-- [Knapsack](optimization/knapsack.py)
-- [List comprehensions speed](optimization/listcomp_speed.py)
-
-## Games
-
-- [Guess the number](games/guess_number.py)
-
-## Math
-
-- [Factorial](math/factorial.py)
-- [Fibonacci](math/fib.py)
-- [Vector2d](math/vector2d.py)
-
-## Basics
-
-- [apis](basics/apis.py)
-- [arrays](basics/arrays.py)
-- [charts](basics/charts.py)
-- [collections](basics/collections.py)
-- [comprehension](basics/comprehension.py)
-- [doctest_example](basics/doctest_example.py)
-- [filtering](basics/filtering.py)
-- [map_dict](basics/map_dict.py)
-- [map](basics/map.py)
-- [mysql_connection](basics/mysql_connection.py)
-- [read_csv](basics/read_csv.py)
-- [reduce](basics/reduce.py)
-- [test](basics/test.py)
-- [typing](basics/typing_test.py)
-- [tuples](basics/tuples.py)
-- [match/case](basics/match_case.py)
-- [Class patterns](basics/class_patterns.py)
+This structured approach ensures a solid foundation and the ability to recognize and apply common patterns to solve a wide range of interview problems.

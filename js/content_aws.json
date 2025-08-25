@@ -1,0 +1,50 @@
+[
+    {
+        "name": "00. Introduction",
+        "theory": "./aws_cloud_practitioner/00_introduction_to_aws.md"
+    },
+    {
+        "name": "01. Domain: Cloud Concepts",
+        "theory": "./aws_cloud_practitioner/01_domain_cloud_concepts/theory.md",
+        "key_services": "./aws_cloud_practitioner/01_domain_cloud_concepts/key_services.md",
+        "hands_on": "./aws_cloud_practitioner/01_domain_cloud_concepts/hands_on.md",
+        "exam": { "path": "./aws_cloud_practitioner/01_domain_cloud_concepts/exam.md", "solution": "./aws_cloud_practitioner/01_domain_cloud_concepts/exam_solutions.md" },
+        "cheatsheet": "./aws_cloud_practitioner/01_domain_cloud_concepts/cheatsheet.md"
+    },
+    {
+        "name": "02. Domain: Security & Compliance",
+        "theory": "./aws_cloud_practitioner/02_domain_security_and_compliance/theory.md",
+        "key_services": "./aws_cloud_practitioner/02_domain_security_and_compliance/key_services.md",
+        "hands_on": "./aws_cloud_practitioner/02_domain_security_and_compliance/hands_on.md",
+        "exam": { "path": "./aws_cloud_practitioner/02_domain_security_and_compliance/exam.md", "solution": "./aws_cloud_practitioner/02_domain_security_and_compliance/exam_solutions.md" },
+        "cheatsheet": "./aws_cloud_practitioner/02_domain_security_and_compliance/cheatsheet.md"
+    },
+    {
+        "name": "03. Domain: Cloud Technology",
+        "theory": "./aws_cloud_practitioner/03_domain_cloud_technology/theory.md",
+        "key_services": "./aws_cloud_practitioner/03_domain_cloud_technology/key_services.md",
+        "hands_on": "./aws_cloud_practitioner/03_domain_cloud_technology/hands_on.md",
+        "exam": { "path": "./aws_cloud_practitioner/03_domain_cloud_technology/exam.md", "solution": "./aws_cloud_practitioner/03_domain_cloud_technology/exam_solutions.md" },
+        "cheatsheet": "./aws_cloud_practitioner/03_domain_cloud_technology/cheatsheet.md"
+    },
+    {
+        "name": "04. Domain: Billing & Support",
+        "theory": "./aws_cloud_practitioner/04_domain_billing_and_support/theory.md",
+        "key_services": "./aws_cloud_practitioner/04_domain_billing_and_support/key_services.md",
+        "hands_on": "./aws_cloud_practitioner/04_domain_billing_and_support/hands_on.md",
+        "exam": { "path": "./aws_cloud_practitioner/04_domain_billing_and_support/exam.md", "solution": "./aws_cloud_practitioner/04_domain_billing_and_support/exam_solutions.md" },
+        "cheatsheet": "./aws_cloud_practitioner/04_domain_billing_and_support/cheatsheet.md"
+    },
+    {
+        "name": "Practice Exam 1",
+        "exam": { "path": "./aws_cloud_practitioner/05_practice_exam_1.md", "solution": "./aws_cloud_practitioner/05_practice_exam_1_solutions.md" }
+    },
+    {
+        "name": "Practice Exam 2",
+        "exam": { "path": "./aws_cloud_practitioner/06_practice_exam_2.md", "solution": "./aws_cloud_practitioner/06_practice_exam_2_solutions.md" }
+    },
+    {
+        "name": "Practice Exam 3",
+        "exam": { "path": "./aws_cloud_practitioner/07_practice_exam_3.md", "solution": "./aws_cloud_practitioner/07_practice_exam_3_solutions.md" }
+    }
+]
