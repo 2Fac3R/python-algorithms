@@ -18,17 +18,16 @@ intervals.sort(key = lambda i: i[0])
 
 ### The Merge Pattern
 
-This pattern is used to merge overlapping intervals into a set of non-overlapping ones.
+**Logic:** Sort intervals by start time. Iterate and compare the current interval with the end of the last interval in the result list. If it overlaps, merge them by updating the end time; otherwise, add it as a new interval.
 
-**Logic:**
-1.  Sort the intervals.
-2.  Initialize `merged = [intervals[0]]`.
-3.  Loop through the rest of the `intervals`:
-    -   Get the `last_merged = merged[-1]`.
-    -   Get the `current_interval`.
-    -   **Check for overlap:** `if current_interval[0] <= last_merged[1]:`
-        -   **If Overlap:** Update the end of the last interval: `last_merged[1] = max(last_merged[1], current_interval[1])`.
-    -   **Else (No Overlap):**
-        -   Add the current interval to the results: `merged.append(current_interval)`.
-
-**Overall Complexity:** O(n log n) time (dominated by the sort), O(n) space (for the result).
+**Implementation Snippet:**
+```python
+intervals.sort(key=lambda i: i[0])
+merged = [intervals[0]]
+for current in intervals[1:]:
+    last_merged = merged[-1]
+    if current[0] <= last_merged[1]:
+        last_merged[1] = max(last_merged[1], current[1])
+    else:
+        merged.append(current)
+```

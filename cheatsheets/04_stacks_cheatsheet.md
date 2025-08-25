@@ -25,13 +25,19 @@ Use a standard `list`.
 
 ### Classic Problem: Valid Parentheses
 
+**Logic:** Use a map for brackets. If open, push to stack. If close, pop and check if it matches. After loop, stack must be empty.
+
+**Implementation Snippet:**
 ```python
-# Visual Logic
-
-String: { [ ( ) ] }
-
-Stack: | { | -> | { [ | -> | { [ ( | -> | { [ | -> | { | -> |   |
-       Push  Push    Push      Pop       Pop      Pop    (valid)
+stack = []
+bracket_map = { ")": "(", "}": "{", "]": "[" }
+for char in s:
+    if char in bracket_map.values():
+        stack.append(char)
+    elif char in bracket_map.keys():
+        if not stack or stack.pop() != bracket_map[char]:
+            return False
+return not stack
 ```
 
 **Advanced Use Case: Min Stack**

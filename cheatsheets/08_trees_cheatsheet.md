@@ -34,3 +34,31 @@ class TreeNode:
 | **DFS** | In-order | Left -> Root -> Right | Stack (Recursion) | Getting values from a **BST in sorted order**. |
 | **DFS** | Post-order | Left -> Right -> Root | Stack (Recursion) | Deleting nodes. |
 | **BFS** | Level-order | Visit layer by layer | Queue (`deque`) | Finding the shortest path from root to a node. |
+
+---
+
+### Implementation Snippets
+
+**DFS In-order Traversal:**
+```python
+def inorder_traversal(node):
+    if not node:
+        return
+    inorder_traversal(node.left)
+    print(node.val) # Process node
+    inorder_traversal(node.right)
+```
+
+**BFS Level-order Traversal:**
+```python
+from collections import deque
+
+def level_order_traversal(root):
+    if not root: return
+    queue = deque([root])
+    while queue:
+        node = queue.popleft()
+        print(node.val) # Process node
+        if node.left: queue.append(node.left)
+        if node.right: queue.append(node.right)
+```

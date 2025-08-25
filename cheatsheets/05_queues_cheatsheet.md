@@ -27,14 +27,19 @@ Use `collections.deque` for efficiency.
 
 ### Classic Problem: Breadth-First Search (BFS)
 
+**Logic:** Use a queue to visit nodes layer by layer. Add neighbors to the queue and use a `visited` set to avoid cycles.
+
+**Implementation Snippet:**
 ```python
-# Visual Logic
-
-Graph Level 0: (A)
-Graph Level 1: (B, C)
-
-Queue: | A | -> | B, C | -> | C, D, E | -> ...
-       Deq A, Enq B,C  Deq B, Enq D,E
+queue = deque([start_node])
+visited = {start_node}
+while queue:
+    node = queue.popleft()
+    # ... process node ...
+    for neighbor in get_neighbors(node):
+        if neighbor not in visited:
+            visited.add(neighbor)
+            queue.append(neighbor)
 ```
 
 **Complexity:** `Time: O(n)` (for BFS), `Space: O(n)` (to store nodes in the queue)

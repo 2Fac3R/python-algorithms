@@ -27,10 +27,23 @@
 -   **Requirement:** All edge weights must be **non-negative**.
 -   **Key Idea:** Use a **min-priority queue (min-heap)** to always explore the path with the smallest current distance from the source.
 
-**Algorithm:**
-1.  Create `distances` map, initialized to infinity (source is 0).
-2.  Push `(0, source_node)` to a min-heap.
-3.  While heap is not empty:
-    a. Pop the `(dist, node)` with the smallest `dist`.
-    b. If `dist` is greater than the known `distances[node]`, continue (stale path).
-    c. For each neighbor, if a shorter path is found via the current node, update `distances[neighbor]` and push the new `(new_dist, neighbor)` to the heap.
+**Implementation Snippet (Conceptual):**
+```python
+import heapq
+
+distances = {node: float('inf') for node in graph}
+distances[source] = 0
+pq = [(0, source)] # (distance, node)
+
+while pq:
+    d, node = heapq.heappop(pq)
+
+    if d > distances[node]:
+        continue
+
+    for neighbor, weight in graph[node]:
+        new_dist = d + weight
+        if new_dist < distances[neighbor]:
+            distances[neighbor] = new_dist
+            heapq.heappush(pq, (new_dist, neighbor))
+```

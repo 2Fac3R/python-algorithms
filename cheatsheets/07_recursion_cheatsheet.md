@@ -16,9 +16,19 @@
 
 ### Key Mantra
 
-1.  **Solve the Base Case:** Figure out the simplest possible input and its direct answer.
-2.  **Assume the Recursive Leap of Faith:** Assume your function already works for a smaller version of the problem (e.g., `my_func(n-1)`).
-3.  **Solve the Current Case:** Use the result from the smaller version to solve the current one.
+1.  **Solve the Base Case:** The simplest version of the problem.
+2.  **Recursive Leap of Faith:** Assume `my_func(n-1)` already works.
+3.  **Solve the Current Case:** Use the result of the smaller version to solve the current `my_func(n)`.
+
+**Implementation Snippet (Factorial):**
+```python
+def factorial(n):
+    # 1. Base Case
+    if n <= 1:
+        return 1
+    # 2. & 3. Recursive Step & Solve
+    return n * factorial(n - 1)
+```
 
 ---
 

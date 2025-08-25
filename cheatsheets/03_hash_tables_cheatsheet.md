@@ -27,4 +27,17 @@
 - **`key in my_dict`**: Membership test. Fast and Pythonic.
 - **`my_dict.items()`**: Iterate over `(key, value)` pairs.
 
+---
+
+### Implementation Snippet (Two Sum)
+
+```python
+num_map = {}
+for i, num in enumerate(nums):
+    complement = target - num
+    if complement in num_map:
+        return [num_map[complement], i]
+    num_map[num] = i
+```
+
 **Complexity:** `Time: O(1)` (average), `Space: O(n)` (to store `n` items)
