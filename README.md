@@ -14,7 +14,7 @@ Then, open `http://localhost:8000` in your browser.
 
 ## Content Overview
 
-The training plan is divided into three main sections:
+The training plan is divided into four main sections:
 
 ### I. Fundamentals
 This section covers the essential prerequisite knowledge for the entire course, including:
@@ -35,5 +35,14 @@ This section provides a deep dive into 24 fundamental software design patterns, 
 - A practical coding challenge and solution.
 - An exam with solutions.
 - A quick-reference cheatsheet.
+
+### IV. AWS Cloud Practitioner
+This section offers a comprehensive study plan for the AWS Certified Cloud Practitioner (CLF-C02) exam. It covers the four official exam domains, with:
+- Detailed theory for each domain.
+- Descriptions of key AWS services.
+- Hands-on lab suggestions for practical experience.
+- Domain-specific exam questions and solutions.
+- Concise cheatsheets for quick review.
+- Three full-length practice exams to simulate the certification test.
 
 This structured approach ensures a solid foundation and the ability to recognize and apply common patterns to solve a wide range of interview problems.
